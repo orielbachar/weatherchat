@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
+    <link type="text/css" rel = "stylesheet" href="style.css"  />
+    <meta charset="utf-8">
+    <title>Weather-Chat</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="raw">
+        <div class="col-xs-12 col-md-8">
+          <h1 class="page-header">Weahter-Chat</h1>
+
+            <div class="input-group">
+              <input id="userCity" class="form-control" type="text" placeholder="Enter City"/>
+               <span class="input-group-btn">
+               <button id="citybtn" class="btn btn-primary" type="button">Go!</button>
+               </span>
+            </div>
+            <div id="citydiv"></div>
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script id="entry-template" type="text/x-handlebars-template">
+
+    <div class="panel panel-default">
+      <div class="panel-body" id="citydiv">
+          <button id="delete" class="btn-link"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+          <h4>{{city}}</h4>
+          <p>{{temp}}</p>
+          <div class="commenthere"></div>
+          <input id="userComment" class="form-control" type="text" placeholder="Comment about the weather in {{city}}"/>
+          <button id="citybtn2" class="btn btn-success" type="button">Comment</button>
+      </div>
+    </div>
+
+  </script>
+
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
